@@ -9,8 +9,9 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
+        <language>en</language>
         <platform>all</platform>
-        <summary>Browse and watch videos from The New Boston</summary>
-        <description>Free Educational Video Tutorials on Computer Programming, Adobe Software, Computer Science and More!</description>
+        <summary lang="en">Browse and watch videos from The New Boston</summary>
+        <description lang="en">Free Educational Video Tutorials on Computer Programming, Adobe Software, Computer Science and More!</description>
     </extension>
 </addon>
