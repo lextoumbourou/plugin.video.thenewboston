@@ -33,7 +33,8 @@ def get_params():
 
     return params
 
-def add_directory_link(title, thumbnail, mode, url=None, isFolder=True, totalItems=0):
+def add_directory_link(title, thumbnail, mode,url=None, is_folder=True, 
+                       is_playable=False, total_items=0):
     """Return addDirectoryItem() method"""
     final_url = "{0}?mode={1}&title={2}".format(sys.argv[0], 
                                                 mode, 
@@ -45,12 +46,14 @@ def add_directory_link(title, thumbnail, mode, url=None, isFolder=True, totalIte
                                  '',
                                  thumbnail,
                                  thumbnail)
+    if is_playable:
+        list_item.setProperty('IsPlayable', 'true') 
 
     return xbmcplugin.addDirectoryItem(__addon_id_int__, 
                                        final_url, 
                                        list_item, 
-                                       isFolder=isFolder, 
-                                       totalItems=totalItems) 
+                                       isFolder=is_folder, 
+                                       totalItems=total_items) 
 
 def add_next_page(mode, url, page_no):
     """Return addDirectoryItem() method for Next Page"""
@@ -68,9 +71,9 @@ def add_next_page(mode, url, page_no):
 def play_video(url):
     """Return setResolvedUrl method to play a video"""
     list_item = xbmcgui.ListItem(path=url)
-    xbmcplugin.setResolvedUrl(handle=__addon_id_int__,
-                              succeeded=True,
-                              listitem=list_item)
+    return xbmcplugin.setResolvedUrl(handle=__addon_id_int__,
+                                     succeeded=True,
+                                     listitem=list_item)
 
 def end_directory():
     """
