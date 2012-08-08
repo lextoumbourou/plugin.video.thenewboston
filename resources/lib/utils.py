@@ -12,9 +12,7 @@ __addon_id_int__ = int(sys.argv[1])
 __addon_dir__    = xbmc.translatePath(__addon__.getAddonInfo('path'))
 
 def get_params():
-    """
-    Return a dictionary of parameters collected from the plugin URL
-    """
+    """Return a dictionary of parameters collected from the plugin URL"""
     params = {}
     paramstring = sys.argv[2]
     # Check params exist
@@ -36,9 +34,7 @@ def get_params():
     return params
 
 def add_directory_link(title, thumbnail, mode, url=None, isFolder=True, totalItems=0):
-    """
-    A wrapper for the addDirectoryItem() method
-    """
+    """Return addDirectoryItem() method"""
     final_url = "{0}?mode={1}&title={2}".format(sys.argv[0], 
                                                 mode, 
                                                 title)
@@ -57,10 +53,7 @@ def add_directory_link(title, thumbnail, mode, url=None, isFolder=True, totalIte
                                        totalItems=totalItems) 
 
 def add_next_page(mode, url, page_no):
-    """
-    A wrapper for addDirectoryItem() method that returns the 'Next Page'
-    link
-    """
+    """Return addDirectoryItem() method for Next Page"""
     final_url = "{0}?mode={1}&url={2}&page_no={3}".format(sys.argv[0], 
                                                           mode, 
                                                           url,
@@ -72,6 +65,12 @@ def add_next_page(mode, url, page_no):
                                        listitem=list_item, 
                                        isFolder=True, 
                                        totalItems=5)
+def play_video(url):
+    """Return setResolvedUrl method to play a video"""
+    list_item = xbmcgui.ListItem(path=url)
+    xbmcplugin.setResolvedUrl(handle=__addon_id_int__,
+                              succeeded=True,
+                              listitem=list_item)
 
 def end_directory():
     """

@@ -50,8 +50,7 @@ def main(params):
         html = scraper.open_page(unquote(params['url']))
         youtube_url, youtube_id = scraper.get_youtube(html)
         url = "plugin://plugin.video.youtube?action=play_video&videoid={0}".format(youtube_id)
-
-        xbmc.executebuiltin("xbmc.PlayMedia({0})".format(url))
+        play_video(url)
 
     utils.end_directory()
 
