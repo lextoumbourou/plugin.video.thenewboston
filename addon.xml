@@ -2,8 +2,8 @@
 <addon id="plugin.video.thenewboston" version="1.0.1" name="TheNewBoston" provider-name="lextoumbourou">
     <requires>
         <import addon="xbmc.python" version="2.0" />
-        <import addon="script.module.beautifulsoup" />
-        <import addon="plugin.video.youtube" />
+        <import addon="script.module.beautifulsoup" version="3.2" />
+        <import addon="plugin.video.youtube" version="3.1.0" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
