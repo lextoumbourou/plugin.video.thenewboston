@@ -35,7 +35,7 @@ def get_params():
 
 def add_directory_link(title, thumbnail, mode,url=None, is_folder=True, 
                        is_playable=False, total_items=0):
-    """Return addDirectoryItem() method"""
+    """Return addDirectoryItem method"""
     final_url = "{0}?mode={1}&title={2}".format(sys.argv[0], 
                                                 mode, 
                                                 title)
@@ -56,7 +56,7 @@ def add_directory_link(title, thumbnail, mode,url=None, is_folder=True,
                                        totalItems=total_items) 
 
 def add_next_page(mode, url, page_no):
-    """Return addDirectoryItem() method for Next Page"""
+    """Return addDirectoryItem method for Next Page"""
     final_url = "{0}?mode={1}&url={2}&page_no={3}".format(sys.argv[0], 
                                                           mode, 
                                                           url,
@@ -76,7 +76,5 @@ def play_video(url):
                                      listitem=list_item)
 
 def end_directory():
-    """
-    Simple wrapper for the endOfDirectory method
-    """
+    """Return endOfDirectory method """
     return xbmcplugin.endOfDirectory(__addon_id_int__)
