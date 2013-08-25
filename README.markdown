@@ -10,7 +10,7 @@ Plugin available through official repo. Installation info available [here](http:
 
 XBMC Version
 ============
-Eden
+Eden/Frodo
 
 License
 ======================
