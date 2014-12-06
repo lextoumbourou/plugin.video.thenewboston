@@ -1,3 +1,6 @@
+1.1.1
+- Fixed deps
+
 1.1.0
 - Fixed scraper
 - Migrated to xbmcswift
