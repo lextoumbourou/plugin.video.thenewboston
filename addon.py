@@ -4,7 +4,6 @@ from resources.lib import tnb
 
 
 plugin = Plugin()
-LOGO = 'http://thenewboston.org/images/theNewBoston_logo.png'
 
 
 @plugin.route('/')
@@ -14,8 +13,7 @@ def categories():
         title = category['title']
         items.append({
             'label': title,
-            'path': plugin.url_for('topics', category=title),
-            'thumbnail': LOGO})
+            'path': plugin.url_for('topics', category=title)})
 
     return items
 
