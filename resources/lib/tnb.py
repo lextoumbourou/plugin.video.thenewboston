@@ -39,7 +39,7 @@ def get_topics(category):
                 for item in dl.findAll('dd'):
                     link = item.find('a', 'category-name')
                     output.append({
-                        'title': link.text,
+                        'title': link.getText(' '),
                         'lesson_id': get_lesson_id(link['href'])})
 
     return output
