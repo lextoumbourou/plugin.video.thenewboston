@@ -16,6 +16,8 @@
     <summary lang="en">Browse and watch videos from The New Boston</summary>
     <description lang="en">Free Educational Video Tutorials on Computer Programming, Adobe Software, Computer Science and More!</description>
     <license>MIT</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=136198</forum>
     <website>http://github.com/lextoumbourou/plugin.video.thenewboston</website>
+    <source>https://github.com/lextoumbourou/plugin.video.thenewboston</source>
   </extension>
 </addon>
