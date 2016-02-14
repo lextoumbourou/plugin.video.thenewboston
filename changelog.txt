@@ -1,6 +1,9 @@
-1.1.2
+1.1.3
 - Fixed scraper
 - Added tests
+
+1.1.2
+- Marked broken
 
 1.1.1
 - Fixed deps
